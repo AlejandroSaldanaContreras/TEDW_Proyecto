@@ -12,8 +12,8 @@ class UserSchema extends Schema {
       table.string('password', 60).notNullable()
       table.string('name', 100).notNullable()
       table.string('department', 100).notNullable()
-      table.integer('id_rol') //falta
-      table.integer('id_status') //falta
+      table.integer('id_rol').unsigned().references('id').inTable('rols')
+      table.integer('id_status').unsigned().references('id').inTable('statuses')
       table.timestamps()
     })
   }
