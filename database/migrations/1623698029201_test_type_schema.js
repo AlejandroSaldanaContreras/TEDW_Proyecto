@@ -7,7 +7,7 @@ class TestTypeSchema extends Schema {
   up () {
     this.create('test_types', (table) => {
       table.increments()
-      table.String('test_type', 200).notNullable()
+      table.string('test_type', 200).notNullable()
       table.timestamps()
     })
   }

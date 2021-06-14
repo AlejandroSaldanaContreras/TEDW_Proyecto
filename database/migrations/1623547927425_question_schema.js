@@ -7,7 +7,7 @@ class QuestionSchema extends Schema {
   up () {
     this.create('questions', (table) => {
       table.increments()
-      table.String('question', 200).notNullable()
+      table.string('question', 200).notNullable()
       table.timestamps()
     })
   }

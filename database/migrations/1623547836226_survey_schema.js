@@ -9,7 +9,7 @@ class SurveySchema extends Schema {
       table.increments()
       table.integer('id_user').unsigned().references('id').inTable('users')
       table.integer('id_modality').unsigned().references('id').inTable('survey_modalities')
-      table.date().notNullable()
+      table.date('date').notNullable()
       table.timestamps()
     })
   }
