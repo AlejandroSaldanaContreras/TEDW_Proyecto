@@ -3,21 +3,20 @@
 /** @type {import('@adonisjs/lucid/src/Schema')} */
 const Schema = use('Schema')
 
-class AlertSchema extends Schema {
+class OrderSchema extends Schema {
   up () {
-    this.create('alerts', (table) => {
+    this.create('orders', (table) => {
       table.increments()
-      table.string('email', 254).notNullable()
-      table.string('alert', 250).notNullable()
+      table.String('result', 100).notNullable()
       table.integer('id_user').unsigned().references('id').inTable('users')
+      table.integer('id_test_type').unsigned().references('id').inTable('test_types')
       table.timestamps()
-      
     })
   }
 
   down () {
-    this.drop('alerts')
+    this.drop('orders')
   }
 }
 
-module.exports = AlertSchema
+module.exports = OrderSchema
