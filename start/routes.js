@@ -28,5 +28,7 @@ Route.group(() => {
   
   Route.get('rols', 'RolController.index');
   Route.post('rols', 'RolController.create');
+  Route.delete('rols/:id', 'RolController.destroy');
+  Route.patch('rols/:id', 'RolController.update');
 }).
   prefix('api')
