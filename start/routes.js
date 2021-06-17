@@ -31,6 +31,21 @@ Route.group(() => {
   Route.delete('rols/:id', 'RolController.destroy');
   Route.patch('rols/:id', 'RolController.update');
 
+  Route.get('modality', 'SurveyModalityController.index');
+  Route.post('modality', 'SurveyModalityController.create');
+  Route.delete('modality/:id', 'SurveyModalityController.destroy');
+  Route.patch('modality/:id', 'SurveyModalityController.update');
+
+  Route.get('question', 'QuestionController.index');
+  Route.post('question', 'QuestionController.create');
+  Route.delete('question/:id', 'QuestionController.destroy');
+  Route.patch('question/:id', 'QuestionController.update');
+
+  Route.get('survey', 'SurveyController.index');
+  Route.post('survey', 'SurveyController.create');
+  Route.delete('survey/:id', 'SurveyController.destroy');
+  Route.patch('survey/:id', 'SurveyController.update');
+
   Route.get('status', 'StatusController.index');
   Route.post('status', 'StatusController.create');
   Route.delete('status/:id', 'StatusController.destroy');
