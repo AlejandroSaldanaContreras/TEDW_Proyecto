@@ -31,7 +31,6 @@ Route.group(() => {
   Route.delete('rols/:id', 'RolController.destroy');
   Route.patch('rols/:id', 'RolController.update');
 
-<<<<<<< HEAD
   Route.get('modality', 'SurveyModalityController.index');
   Route.post('modality', 'SurveyModalityController.create');
   Route.delete('modality/:id', 'SurveyModalityController.destroy');
@@ -47,7 +46,6 @@ Route.group(() => {
   Route.delete('survey/:id', 'SurveyController.destroy');
   Route.patch('survey/:id', 'SurveyController.update');
 
-=======
   Route.get('status', 'StatusController.index');
   Route.post('status', 'StatusController.create');
   Route.delete('status/:id', 'StatusController.destroy');
@@ -72,6 +70,5 @@ Route.group(() => {
   Route.post('trazability', 'TrazabilityController.create');
   Route.delete('trazability/:id', 'TrazabilityController.destroy');
   Route.patch('trazability/:id', 'TrazabilityController.update');
->>>>>>> bb5c378348650649a8393449de17553873233e80
 }).
   prefix('api')
