@@ -30,5 +30,30 @@ Route.group(() => {
   Route.post('rols', 'RolController.create');
   Route.delete('rols/:id', 'RolController.destroy');
   Route.patch('rols/:id', 'RolController.update');
+
+  Route.get('status', 'StatusController.index');
+  Route.post('status', 'StatusController.create');
+  Route.delete('status/:id', 'StatusController.destroy');
+  Route.patch('status/:id', 'StatusController.update');
+
+  Route.get('alerts', 'AlertController.index');
+  Route.post('alerts', 'AlertController.create');
+  Route.delete('alerts/:id', 'AlertController.destroy');
+  Route.patch('alerts/:id', 'AlertController.update');
+
+  Route.get('test_type', 'TestTypeController.index');
+  Route.post('test_type', 'TestTypeController.create');
+  Route.delete('test_type/:id', 'TestTypeController.destroy');
+  Route.patch('test_type/:id', 'TestTypeController.update');
+
+  Route.get('order', 'OrderController.index');
+  Route.post('order', 'OrderController.create');
+  Route.delete('order/:id', 'OrderController.destroy');
+  Route.patch('order/:id', 'OrderController.update');
+
+  Route.get('trazability', 'TrazabilityController.index');
+  Route.post('trazability', 'TrazabilityController.create');
+  Route.delete('trazability/:id', 'TrazabilityController.destroy');
+  Route.patch('trazability/:id', 'TrazabilityController.update');
 }).
   prefix('api')
