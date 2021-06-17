@@ -70,5 +70,37 @@ Route.group(() => {
   Route.post('trazability', 'TrazabilityController.create');
   Route.delete('trazability/:id', 'TrazabilityController.destroy');
   Route.patch('trazability/:id', 'TrazabilityController.update');
+
+  Route.get('medicine', 'MedicineController.index');
+  Route.post('medicine', 'MedicineController.create');
+  Route.delete('medicine/:id', 'MedicineController.destroy');
+  Route.patch('medicine/:id', 'MedicineController.update');
+
+  Route.get('multimedia','MultimediaController.index');
+  Route.post('multimedia','MultimediaController.create');
+  Route.delete('multimedia/:id','MultimediaController.destroy');
+  Route.patch('multimedia/:id','MultimediaController.update');
+
+  Route.get('multimediaConsultation','MultimediaConsultationController.index');
+  Route.post('multimediaConsultation','MultimediaConsultationController.create');
+  Route.delete('multimediaConsultation/:id','MultimediaConsultationController.destroy');
+  Route.patch('multimediaConsultation/:id','MultimediaConsultationController.update');
+  
+  Route.get('private_consultation','PrivateConsultationController.index');
+  Route.post('private_consultation','PrivateConsultationController.create');
+  Route.delete('private_consultation','PrivateConsultationController.destroy');
+  Route.patch('private_consultation','PrivateConsultationController.update');
+  
+  Route.get('recipe','RecipeController.index');
+  Route.post('recipe','RecipeController.create');
+  Route.delete('recipe','RecipeController.destroy');
+  Route.patch('recipe','RecipeController.update');
+  
+  Route.get('type_consultation','TypeConsultationController.index');
+  Route.post('type_consultation','TypeConsultationController.create');
+  Route.delete('type_consultation','TypeConsultationController.destroy');
+  Route.patch('type_consultation','TypeConsultationController.update');
+
+
 }).
   prefix('api')
