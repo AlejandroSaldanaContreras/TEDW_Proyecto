@@ -17,10 +17,14 @@ class UserController {
         return this.login(...arguments);
     }
 
-    async login({ rquest, auth }){
-        const{email, password} = reques.all();
+    async login({ request, auth }){
+        const{email, password} = request.all();
         const token = await auth.attempt(email, password);
         return token;
+    }
+
+    async index(){
+        return await User.all()
     }
 }
 
