@@ -25,6 +25,7 @@ Route.group(() => {
   Route.post('auth/register', 'UserController.register');
   Route.post('auth/login', 'UserController.login');
   Route.get('auth/users', 'UserController.index');
+  Route.post('/user', 'UserController.get_user');
   
   Route.get('rols', 'RolController.index');
   Route.post('rols', 'RolController.create');
@@ -100,6 +101,7 @@ Route.group(() => {
   Route.post('type_consultation','TypeConsultationController.create');
   Route.delete('type_consultation','TypeConsultationController.destroy');
   Route.patch('type_consultation','TypeConsultationController.update');
+  
 
 
 }).
