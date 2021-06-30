@@ -34,6 +34,11 @@ class PrivateConsultationController {
         await privateConsultation.delete();
         return privateConsultation;
     }
+    async selectByUser({params}){
+        const{ id } = params
+        return await PrivateConsultation.query('select * from private_consultation').where('id_user','=',id)
+        .fetch();
+    }
 }
 
 module.exports = PrivateConsultationController

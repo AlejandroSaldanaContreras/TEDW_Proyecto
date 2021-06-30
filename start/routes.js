@@ -91,6 +91,7 @@ Route.group(() => {
   Route.post('private_consultation','PrivateConsultationController.create');
   Route.delete('private_consultation','PrivateConsultationController.destroy');
   Route.patch('private_consultation','PrivateConsultationController.update');
+  Route.get('private_consultation/:id','PrivateConsultationController.selectByUser');
   
   Route.get('recipe','RecipeController.index');
   Route.post('recipe','RecipeController.create');
