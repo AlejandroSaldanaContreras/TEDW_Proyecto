@@ -31,6 +31,11 @@ class UserController {
         const { username } = request.all();
         return await User.findBy('username', username);
     }
+    async get_user_by_id({params}){
+         const{ id } = params;
+         const user = await User.findBy('id',id)
+         return user;
+    }
 }
 
 module.exports = UserController

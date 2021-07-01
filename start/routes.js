@@ -26,6 +26,7 @@ Route.group(() => {
   Route.post('auth/login', 'UserController.login');
   Route.get('auth/users', 'UserController.index');
   Route.post('/user', 'UserController.get_user');
+  Route.get('auth/users/:id', 'UserController.get_user_by_id');
   
   Route.get('rols', 'RolController.index');
   Route.post('rols', 'RolController.create');
@@ -78,6 +79,7 @@ Route.group(() => {
   Route.post('medicine', 'MedicineController.create');
   Route.delete('medicine/:id', 'MedicineController.destroy');
   Route.patch('medicine/:id', 'MedicineController.update');
+  Route.get('medicine/:id', 'MedicineController.getMedicineById');
 
   Route.get('multimedia','MultimediaController.index');
   Route.post('multimedia','MultimediaController.create');
