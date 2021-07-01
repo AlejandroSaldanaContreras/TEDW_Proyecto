@@ -1,5 +1,6 @@
 'use strict'
 const PrivateConsultation=use('App/Models/PrivateConsultation');
+const Database = use("Database");
 class PrivateConsultationController {
 
     async index(){
@@ -17,7 +18,7 @@ class PrivateConsultationController {
             id_user,
         });
         await _privateConsultation.save();
-        return _privateConsultation();
+        return _privateConsultation;
     }
     
     async update({ request, params }){
@@ -39,6 +40,18 @@ class PrivateConsultationController {
         return await PrivateConsultation.query('select * from private_consultation').where('id_user','=',id)
         .fetch();
     }
+
+    async dataTableConsultation() {
+        return await Database.from("users as u").innerJoin(
+            "private_consultations as p",
+            "p.id_user",
+            "u.id"
+        ).innerJoin(
+          "type_consultations as t",
+          "p.id_type_consultation",
+          "t.id"
+        )
+      }
 }
 
 module.exports = PrivateConsultationController

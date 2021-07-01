@@ -1,6 +1,7 @@
 'use strict'
 
 const Order = use('App/Models/Order');
+const Database = use("Database");
 
 class OrderController {
     async index () {
@@ -34,6 +35,18 @@ class OrderController {
         await order.save();
         return order;
     }
+
+    async dataTableOrder() {
+        return await Database.from("test_types as t").innerJoin(
+            "orders as o",
+            "o.id_test_type",
+            "t.id"
+        ).innerJoin(
+          "users as u",
+          "o.id_user",
+          "u.id"
+        )
+      }
 }
 
 module.exports = OrderController

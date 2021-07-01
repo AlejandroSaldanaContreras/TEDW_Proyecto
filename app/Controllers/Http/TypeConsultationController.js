@@ -7,13 +7,13 @@ class TypeConsultationController {
     }
     
     async create({request}){
-        const {type_consultation}=request.all();
-        const _typeConsultation=new TypeConsultation();
+        const { type_consultation }=request.all();
+        const _typeConsultation = new TypeConsultation();
         _typeConsultation.fill({
             type_consultation,
         });
         await _typeConsultation.save();
-        return _typeConsultation();
+        return _typeConsultation;
     }
     
     async update({ request, params }){

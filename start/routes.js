@@ -67,6 +67,7 @@ Route.group(() => {
   Route.post('order', 'OrderController.create');
   Route.delete('order/:id', 'OrderController.destroy');
   Route.patch('order/:id', 'OrderController.update');
+  Route.get('orderDT', 'OrderController.dataTableOrder');
 
   Route.get('trazability', 'TrazabilityController.index');
   Route.post('trazability', 'TrazabilityController.create');
@@ -93,6 +94,7 @@ Route.group(() => {
   Route.delete('private_consultation','PrivateConsultationController.destroy');
   Route.patch('private_consultation','PrivateConsultationController.update');
   Route.get('private_consultation/:id','PrivateConsultationController.selectByUser');
+  Route.get("consultationDT", "PrivateConsultationController.dataTableConsultation");
   
   Route.get('recipe','RecipeController.index');
   Route.post('recipe','RecipeController.create');
@@ -103,7 +105,7 @@ Route.group(() => {
   Route.post('type_consultation','TypeConsultationController.create');
   Route.delete('type_consultation','TypeConsultationController.destroy');
   Route.patch('type_consultation','TypeConsultationController.update');
-  
+ 
 
 
 }).
