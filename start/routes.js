@@ -46,6 +46,7 @@ Route.group(() => {
   Route.post('survey', 'SurveyController.create');
   Route.delete('survey/:id', 'SurveyController.destroy');
   Route.patch('survey/:id', 'SurveyController.update');
+  Route.get("surveyDT", "SurveyController.dataTableSurvey");
 
   Route.get('status', 'StatusController.index');
   Route.post('status', 'StatusController.create');

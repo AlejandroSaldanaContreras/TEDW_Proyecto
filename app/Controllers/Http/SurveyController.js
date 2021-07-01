@@ -1,5 +1,6 @@
 'use strict'
 const Survey = use('App/Models/Survey');
+const Database = use("Database");
 
 class SurveyController {
     async create({ request }){
@@ -32,6 +33,18 @@ class SurveyController {
         await survey.save();
         return survey;
     }
+
+    async dataTableSurvey() {
+        return await Database.from("surveys as s").innerJoin(
+            "survey_modalities as m",
+            "s.id_modality",
+            "m.id"
+        ).innerJoin(
+          "users as u",
+          "s.id_user",
+          "u.id"
+        )
+      }
 }
 
 module.exports = SurveyController
