@@ -27,6 +27,8 @@ Route.group(() => {
   Route.get('auth/users', 'UserController.index');
   Route.post('/user', 'UserController.get_user');
   Route.get('auth/users/:id', 'UserController.get_user_by_id');
+  Route.get('users/medicos', 'UserController.getMedicos');
+  Route.get('users/personal', 'UserController.getPersonal');
   
   Route.get('rols', 'RolController.index');
   Route.post('rols', 'RolController.create');
